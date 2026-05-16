@@ -4,7 +4,7 @@
 
 **Taxonomien:**
 - `project-type`: Udemy-Kurs, eigenes Projekt, Kundenprojekt
-- `vendor`: Bootstrap, Tailwind, React
+- `technology`: Bootstrap, Tailwind, React
 - `category`: Frontend, Backend, DevOps
 - `post_tag`: PHP, JS, WordPress
 
@@ -12,6 +12,8 @@
 - ✅ Navigation-Plugin funktioniert
 - ✅ CPTs registriert
 - ⏳ ACF-Beziehungen einrichten
+
+Ich habe übrigens noch eine ältere readme.md gefunden, die ich hier mal reinpacke. Sie ist nicht mehr ganz aktuell, aber gibt einen guten Überblick über die ursprünglichen Ziele und die Architektur des Projekts. Diese Datei habe ich umbenannt zu [docs/architecture-notes.md](./docs/architecture-notes.md), damit sie nicht mit der neuen readme verwechselt wird. Dafür habe ich auch den docs/-Folder erstellt, wo sämtliche Dokumentation landet bevor es die README.md sprengt.
 
 # Fullstack Development – WordPress Multisite Theme & Plugin
 
