@@ -1,3 +1,5 @@
+[../README.md](../README.md)
+
 # Fullstack Development – Architektur-Notizen
 
 ## Aktueller Stand

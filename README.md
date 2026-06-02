@@ -1,5 +1,9 @@
 # Fullstack Development Multisite
 
+docs/ \
+|-[architecture-notes.md](./docs/architecture-notes.md) \
+|-[my-first-gutenberg-app.md](./docs/my-first-gutenberg-app.md)
+
 ## Datenmodell
 
 **Taxonomien:**
@@ -9,15 +13,15 @@
 - `post_tag`: PHP, JS, WordPress
 
 ## Status
-- ✅ Navigation-Plugin funktioniert
 - ✅ CPTs registriert
-- ⏳ ACF-Beziehungen einrichten
+- ✅ ACF-Beziehungen eingerichtet
+- ⏳ Navigation-Plugin in Arbeit
 
 Ich habe übrigens noch eine ältere readme.md gefunden, die ich hier mal reinpacke. Sie ist nicht mehr ganz aktuell, aber gibt einen guten Überblick über die ursprünglichen Ziele und die Architektur des Projekts. Diese Datei habe ich umbenannt zu [docs/architecture-notes.md](./docs/architecture-notes.md), damit sie nicht mit der neuen readme verwechselt wird. Dafür habe ich auch den docs/-Folder erstellt, wo sämtliche Dokumentation landet bevor es die README.md sprengt.
 
 # Fullstack Development – WordPress Multisite Theme & Plugin
 
-Dieses Repository enthält das **Custom WordPress Block Theme** sowie ein **eigenes Developer-Plugin**, das ich für meine persönliche Fullstack-Development-Seite verwende.
+Dieses Repository enthält das **Custom WordPress Block Theme** sowie ein [**eigenes Developer-Plugin**](./plugins/my-first-gutenberg-app/my-first-gutenberg-app.php) [[doc](./docs/architecture-notes.md)] , das ich für meine persönliche Fullstack-Development-Seite verwende.
 
 Ziel des Projekts ist eine **moderne, wartbare und DSGVO-konforme WordPress-Installation**, die sowohl als **Portfolio** als auch langfristig als **Knowledge-Base** dienen kann.
 
@@ -99,7 +103,7 @@ Beispiele:
 
 ## 🧪 Plugin – Environment & Git Branch Indicator
 
-Eigenes Developer-Plugin zur **visuellen Kennzeichnung der Umgebung** direkt in der WordPress Admin-Bar.
+Eigenes Developer-Plugin zur **visuellen Kennzeichnung der Umgebung** direkt in der WordPress Admin-Bar. (diesen Absatz könnte man auch löschen, da die Dokumnetation unter [architecture-notes.md](./docs/architecture-notes.md) zu finden ist, aber die README.md ist noch überschaubar, also lasse ich das mal drin)
 
 ### Funktionen
 
