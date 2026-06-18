@@ -1,8 +1,12 @@
 [../README.md](../README.md)
 
 # Fullstack Theme – Dokumentation
+[Getting Started](#getting-started) \
 [Wann theme.json und wann SASS?](#-wann-themejson-und-wann-sass) \
-[Theme-Konfiguration (theme.json)](#-theme-konfiguration-themejson) 
+[Theme-Konfiguration (theme.json)](#-theme-konfiguration-themejson) \
+[Templates und Parts](#templates-und-parts) \
+[Video-Header](#video-header) 
+
 
 ## Überblick
 
@@ -10,6 +14,14 @@ Das Fullstack Theme ist ein minimalistisches, modernes WordPress-Theme, das spez
 
 ## Getting Started
 
+<div style="text-align: right;">
+
+[theme.json](#-überblick) |
+[nach oben](#fullstack-theme--dokumentation)
+
+</div>
+
+___
 ## 💡 Wann theme.json und wann SASS?
 
 Als Faustregel enthält die `theme.json` alles, was Teil des globalen Designsystems ist und im Block-Editor verfügbar sein soll:
@@ -33,12 +45,20 @@ SASS/CSS wird dagegen für konkrete Implementierungen und Komponenten verwendet:
 **Merksatz:**  
 `theme.json` beschreibt **was das Designsystem kann**, SASS beschreibt **wie die Website umgesetzt wird**.
 
+<div style="text-align: right;">
+
+[theme.json](#-überblick) |
+[nach oben](#fullstack-theme--dokumentation)
+
+</div>
+
+___
 ## 🎨 Theme-Konfiguration (theme.json)
 
 Die theme.json ist die zentrale Design- und Konfigurationsdatei des WordPress-Block-Themes. Sie definiert globale Designsysteme wie Farben, Typografie, Abstände sowie Block-Styles und ersetzt viele klassische PHP-/CSS-Konfigurationen.
 
 Sie bildet damit die Single Source of Truth für das Designsystem des Themes.
-___
+
 ### 🎯 Überblick
 
 Dieses Theme definiert:
@@ -47,7 +67,7 @@ Dieses Theme definiert:
 [🌈 Gradient-Systeme für Hero- und Overlay-Effekte](#-gradients)\
 [🔤 Mehrere Font-Familien (Body, Heading, Code, Handwritten)](#-typografie)\
 [📏 Globale Spacing- und Einheitssysteme](#-layout--spacing)\
-[🧱 Block-spezifische Styles (z. B. Paragraph, Code, Site Title)](#-block-styles)\
+[🧱 Block-spezifische Styles (z. B. Paragraph, Code, Site Title)](#-block-styles-core-blocks)\
 [🎛️ Custom CSS für Feinjustierungen](#-custom-css)\
 [🧩 Template Parts (Header / Footer Varianten)](#-template-parts)\
 [🧠 Architektur-Notizen zur Rolle der theme.json](#-architektur-notiz)
@@ -77,10 +97,10 @@ Das Theme basiert auf einem erweiterten Farbsystem mit semantischen Farben:
 
 👉 Ziel: klare Trennung zwischen UI-Akzenten und Lesefarben
 
-<div align="right">
+<div style="text-align: right;">
 
 [theme.json](#-überblick) |
-[nach oben](#-fullstack-theme--dokumentation)
+[nach oben](#fullstack-theme--dokumentation)
 
 </div>
 
@@ -100,10 +120,10 @@ Das Theme definiert wiederverwendbare Gradient-Varianten:
     für Cards / Highlights
 
 
-<div align="right">
+<div style="text-align: right;">
 
 [theme.json](#-überblick) |
-[nach oben](#-fullstack-theme--dokumentation)
+[nach oben](#fullstack-theme--dokumentation)
 
 </div>
 
@@ -124,10 +144,10 @@ Es gibt vier definierte Schriftfamilien:
 
 #### 👉 Jede Schrift ist mit fontFace lokal eingebunden (self-hosted WOFF2/WOFF)
 
-<div align="right">
+<div style="text-align: right;">
 
 [theme.json](#-überblick) |
-[nach oben](#-fullstack-theme--dokumentation)
+[nach oben](#fullstack-theme--dokumentation)
 
 </div>
 
@@ -140,10 +160,10 @@ ___
 
 #### 👉 Ziel: flexible, responsive Layoutkontrolle direkt im Editor
 
-<div align="right">
+<div style="text-align: right;">
 
 [theme.json](#-überblick) |
-[nach oben](#-fullstack-theme--dokumentation)
+[nach oben](#fullstack-theme--dokumentation)
 
 </div>
 
@@ -152,26 +172,60 @@ ___
 
 Das Theme überschreibt gezielt Standard-Blocks:
 
+
+###### core/site-title
 ```json
-core/site-title
-Font: Handwritten
-Gewicht: 700
-core/code
-Font: Cousine
-Gewicht: 500
-core/paragraph
-Textfarbe: light-grey
-Linkfarbe: light-grey
-Font-size: 1rem
-core/verse
-Handwritten Font
-leichtes Gewicht (500)
+{
+    "typography": {
+        "fontFamily": "var(--wp--preset--font-family--handwritten)",
+        "fontWeight": "700"
+    }
+}
 ```
 
-<div align="right">
+###### core/code
+```json
+{
+    "typography": {
+        "fontFamily": "var(--wp--preset--font-family--code)",
+        "fontWeight": "500"
+    }
+}
+```
+
+###### core/paragraph
+```json
+{
+    "color": {
+        "text": "var(--wp--preset--color--light-grey)"
+    },
+    "elements": {
+        "link": {
+            "color": {
+                "text": "var(--wp--preset--color--light-grey)"
+            }
+        }
+    },
+    "typography": {
+        "fontSize": "1rem"
+    }
+}
+```
+
+###### core/heading
+```json
+{
+    "typography": {
+        "fontFamily": "var(--wp--preset--font-family--handwritten)",
+        "fontWeight": "500"
+    }
+}                                  
+```
+
+<div style="text-align: right;">
 
 [theme.json](#-überblick) |
-[nach oben](#-fullstack-theme--dokumentation)
+[nach oben](#fullstack-theme--dokumentation)
 
 </div>
 
@@ -180,49 +234,74 @@ ___
 
 ##### Farben
 ```json
-Background: dark
-Text: light-grey
+{
+    "background": "var(--wp--preset--color--dark)",
+    "text": "var(--wp--preset--color--light-grey)"
+}
 ```
 ##### Typografie
 ```json
-Default Font: Body (Libre Franklin)
-Base Font Size: 1rem
+{
+    "font": {
+        "default": "Libre Franklin"
+    },
+    "font-size": {
+        "base": "1rem"
+    }
+}
 ```
 #### 🧩 Element Styles
-Headings
-H1: Handwritten + Bold
-generelle Headings: Crimson Pro
-Buttons
-Background: Primary
-Text: Light Grey
-Bold (700)
-Links
-Standardfarbe: Ternary (Akzentfarbe)
+```json
+{
+  "button": {
+    "color": {
+      "background": "var(--wp--preset--color--primary)",
+      "text": "var(--wp--preset--color--light-grey)"
+    },
+    "typography": {
+      "fontWeight": "700"
+    }
+  },
+  "h1": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--handwritten)",
+      "fontWeight": "700"
+    }
+  },
+  "heading": {
+    "color": {
+      "text": "var(--wp--preset--color--light)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--heading)"
+    }
+  },
+  "link": {
+    "color": {
+      "text": "var(--wp--preset--color--ternary)"
+    }
+  }
+}
 
-<div align="right">
+```
+<div style="text-align: right;">
 
 [theme.json](#-überblick) |
-[nach oben](#-fullstack-theme--dokumentation)
+[nach oben](#fullstack-theme--dokumentation)
 
 </div>
 
 ___
 ### 🧾 Custom CSS
-```css
+
 
 Zusätzlich enthält die theme.json ein kleines Custom CSS Snippet:
-
-hr {
-border: none;
-height: 1px;
-background: linear-gradient(
-to right,
-transparent,
-rgba(255, 255, 255, 0.15),
-transparent
-);
-margin: 2.5rem 0;
-}
+```sass
+hr
+    border: none
+    height: 1px
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent)
+    margin: 2.5rem 0
 ```
 👉 sorgt für dezente, moderne Trennerlinien
 
@@ -230,10 +309,10 @@ Habe ich nach SASS ausgelagert, um die theme.json übersichtlich zu halten.
 
 
 
-<div align="right">
+<div style="text-align: right;">
 
 [theme.json](#-überblick) |
-[nach oben](#-fullstack-theme--dokumentation)
+[nach oben](#fullstack-theme--dokumentation)
 
 </div>
 
@@ -250,10 +329,10 @@ Das Theme definiert wiederverwendbare Layout-Bausteine:
 
 ##### 👉 Diese Parts sind im Site Editor austauschbar und ermöglichen flexible Layouts ohne Codeänderung.
 
-<div align="right">
+<div style="text-align: right;">
 
 [theme.json](#-überblick) |
-[nach oben](#-fullstack-theme--dokumentation)
+[nach oben](#fullstack-theme--dokumentation)
 
 </div>
 
@@ -269,10 +348,10 @@ Die theme.json übernimmt in diesem Theme die Rolle von:
 ##### 👉 Sie ist bewusst so gestaltet, dass möglichst wenig zusätzliches CSS nötig ist.
 
 
-<div align="right">
+<div style="text-align: right;">
 
 [theme.json](#-überblick) |
-[nach oben](#-fullstack-theme--dokumentation)
+[nach oben](#fullstack-theme--dokumentation)
 
 </div>
 
