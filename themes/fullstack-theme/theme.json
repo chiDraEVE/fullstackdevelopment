@@ -290,7 +290,6 @@
 			"background": "var(--wp--preset--color--dark)",
 			"text": "var(--wp--preset--color--light-grey)"
 		},
-		"css": "hr {\n  border: none;\n  height: 1px;\n  background: linear-gradient(\n    to right,\n    transparent,\n    rgba(255, 255, 255, 0.15),\n    transparent\n  );\n  margin: 2.5rem 0;\n}",
 		"elements": {
 			"button": {
 				"color": {

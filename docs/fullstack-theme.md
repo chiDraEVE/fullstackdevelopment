@@ -1,10 +1,37 @@
 [../README.md](../README.md)
 
 # Fullstack Theme – Dokumentation
+[Wann theme.json und wann SASS?](#-wann-themejson-und-wann-sass) \
+[Theme-Konfiguration (theme.json)](#-theme-konfiguration-themejson) 
 
 ## Überblick
 
 Das Fullstack Theme ist ein minimalistisches, modernes WordPress-Theme, das speziell für Entwickler und Designer entwickelt wurde. Es basiert auf den neuesten WordPress-Technologien und bietet eine solide Grundlage für die Erstellung von ansprechenden und funktionalen Websites.
+
+## Getting Started
+
+## 💡 Wann theme.json und wann SASS?
+
+Als Faustregel enthält die `theme.json` alles, was Teil des globalen Designsystems ist und im Block-Editor verfügbar sein soll:
+
+- Farben und Farbpaletten
+- Schriftarten und Typografie
+- Abstände und Layout-Vorgaben
+- Globale Styles
+- Block-spezifische Standardwerte
+- Template Parts und Design Tokens
+
+SASS/CSS wird dagegen für konkrete Implementierungen und Komponenten verwendet:
+
+- Layouts (Grid, Flexbox, Positionierung)
+- Navigationen, Header und Footer
+- Eigene Blöcke und Komponenten
+- Animationen und Hover-Effekte
+- Responsive Anpassungen
+- Komplexe Selektoren und Zustände
+
+**Merksatz:**  
+`theme.json` beschreibt **was das Designsystem kann**, SASS beschreibt **wie die Website umgesetzt wird**.
 
 ## 🎨 Theme-Konfiguration (theme.json)
 
@@ -16,15 +43,17 @@ ___
 
 Dieses Theme definiert:
 
-🎨 Farbpalette (Primary, Secondary, Ternary, Greyscale)
-🌈 Gradient-Systeme für Hero- und Overlay-Effekte
-🔤 Mehrere Font-Familien (Body, Heading, Code, Handwritten)
-📏 Globale Spacing- und Einheitssysteme
-🧱 Block-spezifische Styles (z. B. Paragraph, Code, Site Title)
-🧩 Template Parts (Header / Footer Varianten)
-🎛️ Custom CSS für Feinjustierungen
-🎨 Farbsystem
+[🎨 Farbpalette (Primary, Secondary, Ternary, Greyscale)](#-farbpalette)\
+[🌈 Gradient-Systeme für Hero- und Overlay-Effekte](#-gradients)\
+[🔤 Mehrere Font-Familien (Body, Heading, Code, Handwritten)](#-typografie)\
+[📏 Globale Spacing- und Einheitssysteme](#-layout--spacing)\
+[🧱 Block-spezifische Styles (z. B. Paragraph, Code, Site Title)](#-block-styles)\
+[🎛️ Custom CSS für Feinjustierungen](#-custom-css)\
+[🧩 Template Parts (Header / Footer Varianten)](#-template-parts)\
+[🧠 Architektur-Notizen zur Rolle der theme.json](#-architektur-notiz)
 
+
+### 🎨 Farbpalette
 Das Theme basiert auf einem erweiterten Farbsystem mit semantischen Farben:
 
     Primärfarben
@@ -47,6 +76,14 @@ Das Theme basiert auf einem erweiterten Farbsystem mit semantischen Farben:
     light / dark als Basis-Hintergründe
 
 👉 Ziel: klare Trennung zwischen UI-Akzenten und Lesefarben
+
+<div align="right">
+
+[theme.json](#-überblick) |
+[nach oben](#-fullstack-theme--dokumentation)
+
+</div>
+
 ___
 ### 🌈 Gradients
 
@@ -61,6 +98,15 @@ Das Theme definiert wiederverwendbare Gradient-Varianten:
     Secondary Soft
     diagonaler Farbverlauf aus Secondary-Tönen
     für Cards / Highlights
+
+
+<div align="right">
+
+[theme.json](#-überblick) |
+[nach oben](#-fullstack-theme--dokumentation)
+
+</div>
+
 ___
 ### 🔤 Typografie
 Font-System
@@ -78,6 +124,14 @@ Es gibt vier definierte Schriftfamilien:
 
 #### 👉 Jede Schrift ist mit fontFace lokal eingebunden (self-hosted WOFF2/WOFF)
 
+<div align="right">
+
+[theme.json](#-überblick) |
+[nach oben](#-fullstack-theme--dokumentation)
+
+</div>
+
+___
 ### 📏 Layout & Spacing
     blockGap: aktiviert (automatischer Abstand zwischen Blöcken)
     Unterstützte Einheiten:
@@ -86,6 +140,14 @@ Es gibt vier definierte Schriftfamilien:
 
 #### 👉 Ziel: flexible, responsive Layoutkontrolle direkt im Editor
 
+<div align="right">
+
+[theme.json](#-überblick) |
+[nach oben](#-fullstack-theme--dokumentation)
+
+</div>
+
+___
 ### 🧱 Block Styles (core blocks)
 
 Das Theme überschreibt gezielt Standard-Blocks:
@@ -105,6 +167,15 @@ core/verse
 Handwritten Font
 leichtes Gewicht (500)
 ```
+
+<div align="right">
+
+[theme.json](#-überblick) |
+[nach oben](#-fullstack-theme--dokumentation)
+
+</div>
+
+___
 ### 🌍 Global Styles
 
 ##### Farben
@@ -127,6 +198,15 @@ Text: Light Grey
 Bold (700)
 Links
 Standardfarbe: Ternary (Akzentfarbe)
+
+<div align="right">
+
+[theme.json](#-überblick) |
+[nach oben](#-fullstack-theme--dokumentation)
+
+</div>
+
+___
 ### 🧾 Custom CSS
 ```css
 
@@ -146,6 +226,18 @@ margin: 2.5rem 0;
 ```
 👉 sorgt für dezente, moderne Trennerlinien
 
+Habe ich nach SASS ausgelagert, um die theme.json übersichtlich zu halten.
+
+
+
+<div align="right">
+
+[theme.json](#-überblick) |
+[nach oben](#-fullstack-theme--dokumentation)
+
+</div>
+
+___
 ### 🧩 Template Parts
 
 Das Theme definiert wiederverwendbare Layout-Bausteine:
@@ -158,6 +250,14 @@ Das Theme definiert wiederverwendbare Layout-Bausteine:
 
 ##### 👉 Diese Parts sind im Site Editor austauschbar und ermöglichen flexible Layouts ohne Codeänderung.
 
+<div align="right">
+
+[theme.json](#-überblick) |
+[nach oben](#-fullstack-theme--dokumentation)
+
+</div>
+
+___
 ### 🧠 Architektur-Notiz
 
 Die theme.json übernimmt in diesem Theme die Rolle von:
@@ -167,3 +267,17 @@ Die theme.json übernimmt in diesem Theme die Rolle von:
 - Teilweise Layout-Konfiguration
 
 ##### 👉 Sie ist bewusst so gestaltet, dass möglichst wenig zusätzliches CSS nötig ist.
+
+
+<div align="right">
+
+[theme.json](#-überblick) |
+[nach oben](#-fullstack-theme--dokumentation)
+
+</div>
+
+___
+
+## Templates und Parts
+
+## Video-Header
