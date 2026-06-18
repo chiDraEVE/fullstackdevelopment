@@ -1,18 +1,74 @@
 [../README.md](../README.md)
 
 # Fullstack Theme – Dokumentation
-[Getting Started](#getting-started) \
+[Getting Started](#-getting-started) \
 [Wann theme.json und wann SASS?](#-wann-themejson-und-wann-sass) \
 [Theme-Konfiguration (theme.json)](#-theme-konfiguration-themejson) \
-[Templates und Parts](#templates-und-parts) \
-[Video-Header](#video-header) 
+[Templates und Parts](#-templates-und-parts) \
+[Video-Header](#-video-header) 
 
 
 ## Überblick
 
 Das Fullstack Theme ist ein minimalistisches, modernes WordPress-Theme, das speziell für Entwickler und Designer entwickelt wurde. Es basiert auf den neuesten WordPress-Technologien und bietet eine solide Grundlage für die Erstellung von ansprechenden und funktionalen Websites.
 
-## Getting Started
+## 🚀 Getting Started
+
+Dieses WordPress Block Theme ist für **fullstackdevelopment.de** entwickelt und basiert auf modernen WordPress-Technologien wie `theme.json`, Gutenberg Blocks und `@wordpress/scripts`.
+
+---
+
+### 📦 Voraussetzungen
+
+Bevor du startest, benötigst du:
+
+- WordPress Installation (lokal oder Server)
+- Node.js (für Build-Prozess)
+- IntelliJ IDEA (oder WebStorm / PhpStorm empfohlen)
+- Git (optional, aber empfohlen)
+
+---
+
+### 📁 Projekt öffnen (IntelliJ)
+
+Dieses Projekt wird nicht über die Kommandozeile eingerichtet, sondern direkt über IntelliJ.
+
+#### Schritte:
+
+1. IntelliJ öffnen
+2. `File → Open`
+3. Projektordner `fullstack-theme` auswählen
+4. Warten, bis Indexing abgeschlossen ist
+
+---
+
+### 📦 Dependencies installieren
+
+IntelliJ erkennt automatisch die `package.json`.
+
+#### Installation:
+
+- Öffne `package.json`
+- Klicke auf **"Install Dependencies"**
+
+oder:
+
+- Rechtsklick auf `package.json`
+- „Run npm install“
+
+---
+
+### ⚙️ Development starten
+
+Im npm-Toolfenster:
+
+- Script auswählen: `start`
+
+Das entspricht:
+
+```bash
+wp-scripts start
+```
 
 <div style="text-align: right;">
 
@@ -357,6 +413,24 @@ Die theme.json übernimmt in diesem Theme die Rolle von:
 
 ___
 
-## Templates und Parts
+## 🏗️ Templates und Parts
 
-## Video-Header
+<div style="text-align: right;">
+
+[theme.json](#-überblick) |
+[nach oben](#fullstack-theme--dokumentation)
+
+</div>
+
+___
+
+## 🎞️ Video-Header
+
+<div style="text-align: right;">
+
+[theme.json](#-überblick) |
+[nach oben](#fullstack-theme--dokumentation)
+
+</div>
+
+___
