@@ -415,6 +415,8 @@ ___
 
 ## 🏗️ Templates und Parts
 
+Also grundsätzlich habe ich hier nichts selbst programmiert, sondern den FSE benutzt und das Plugin "Create Blocke Theme". Ich kann aus dem Dashboad aus Templates und Parts daraus auf die Festplatte schreiben, dass ich sie auch in git tracken kann.
+
 <div style="text-align: right;">
 
 [theme.json](#-überblick) |
