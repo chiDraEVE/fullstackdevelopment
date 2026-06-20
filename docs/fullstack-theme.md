@@ -5,6 +5,7 @@
 [Wann theme.json und wann SASS?](#-wann-themejson-und-wann-sass) \
 [Theme-Konfiguration (theme.json)](#-theme-konfiguration-themejson) \
 [Templates und Parts](#-templates-und-parts) \
+[JavaScript](#-javascript) \
 [Video-Header](#-video-header) 
 
 
@@ -197,6 +198,8 @@ Es gibt vier definierte Schriftfamilien:
     für Code-Blöcke
     Handwritten: Dancing Script
     für Akzent-/Brand-Elemente (z. B. Logo, Site Title)
+
+Für ältere Projekte oder klassische Themes befindet sich im Repository zusätzlich eine Referenzdatei `fonts.css`, die zeigt, wie die Fonts früher per `@font-face` eingebunden wurden.
 
 #### 👉 Jede Schrift ist mit fontFace lokal eingebunden (self-hosted WOFF2/WOFF)
 
@@ -425,8 +428,34 @@ Also grundsätzlich habe ich hier nichts selbst programmiert, sondern den FSE be
 </div>
 
 ___
+## 📜 JavaScript
+
+Das Theme verwendet nur sehr wenig JavaScript.
+
+### Entry Point
+
+Die Datei `src/index.js` dient hauptsächlich als Einstiegspunkt für den Build-Prozess und bindet die globalen SASS-Styles sowie zusätzliche JavaScript-Module ein.
+
+<div style="text-align: right;">
+
+[theme.json](#-überblick) |
+[nach oben](#fullstack-theme--dokumentation)
+
+</div>
+
+___
 
 ## 🎞️ Video-Header
+
+Das Modul `video-banner.js` entfernt auf der Startseite das von WordPress automatisch gesetzte HTML-Attribut `loop` von Cover-Videos.
+
+Standardmäßig gibt WordPress Hintergrundvideos des Cover-Blocks mit aktiviertem Loop aus. Für den Hero-Bereich von fullstackdevelopment.de ist dieses Verhalten jedoch nicht gewünscht. Das Video soll einmal abgespielt werden und anschließend anhalten.
+
+Die Anpassung erfolgt nach dem Laden des DOM durch Entfernen des `loop`-Attributs am Video-Element.
+
+> Hintergrund: Zum Zeitpunkt der Entwicklung bot der WordPress-Editor keine Möglichkeit, das Loop-Verhalten von Cover-Hintergrundvideos zu deaktivieren.
+
+
 
 <div style="text-align: right;">
 
