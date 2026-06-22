@@ -10,7 +10,6 @@
 # Ausnahme für spezifische Plugins und Themes. Ersetzen Sie 'my-plugin' und 'my-theme' durch die tatsächlichen Verzeichnisnamen Ihrer Plugins und Themes.
 !plugins/
 plugins/*
-!plugins/advanced-css-blocks
 #!plugins/are-you-paying-attention
 #!plugins/bookstore
 #!plugins/bookstore-block

@@ -3,7 +3,8 @@
 docs/ \
 |-[architecture-notes.md](./docs/architecture-notes.md) \
 |-[fullstack-blocks.md](./docs/fullstack-blocks.md) \
-|-[my-first-gutenberg-app.md](./docs/my-first-gutenberg-app.md)
+|-[my-first-gutenberg-app.md](./docs/my-first-gutenberg-app.md) \
+|-[fullstack-multisite-navigation.md](./docs/fullstack-multisite-navigation.md)
 
 ## Datenmodell
 
