@@ -1,28 +1,142 @@
 [../README.md](../README.md)
 
-# Fullstack Development – Architektur-Notizen
+# Fullstack Development – Architektur
 
-## Aktueller Stand
-Ich habe lange nicht an diesem Projekt arbeitet. Jetzt habe ich noch mal mit Perplexity geredet und ich hatte zuvor mit ihm eine andere Idee ausarbeitet. Ich versuche mir Überblick zu verschaffen.
+## Ziel
 
-## mu-plugins
+Die Website dient nicht als klassischer Blog.
 
-- `fsd-portfolio.php`
-    - Registriert CPTs: instructor, project, source
-    - Baut `fsd_portfolio_index` als site_transient
-    - `fsd_get_portfolio_index()` liefert zentralen Index für Navigation + Blöcke
+Stattdessen bildet sie ein Wissens- und Lernnetzwerk ab:
 
-## fullstack-navigation (Plugin)
+- Dozenten
+- Quellen
+- Projekte
+- Blogartikel
 
-- `class-navigation-service.php`
-    - Liest statische Links (Impressum, Datenschutz, ...) aus eigener Tabelle
-    - Liest dynamische Teile (Dozenten, Quellen, Projekte) aus `fsd_get_portfolio_index()`
-    - Wird für Header- und Footer-Navigation genutzt (netzwerkweit)
+Die Inhalte stehen über Relationen miteinander in Verbindung und können gegenseitig referenziert werden.
 
-## fullstack-blocks
+---
 
-- Dynamische Blöcke:
-    - `fsd/instructor-card`
-    - `fsd/project-card`
-    - `fsd/source-card`
-- Alle Blöcke lesen Relationen aus `fsd_get_portfolio_index()`, keine eigenen Loops.
+# Inhaltsmodell
+
+## Instructor (Dozent)
+
+Repräsentiert Personen, von denen Wissen stammt.
+
+Beispiele:
+
+- Kursleiter
+- Autoren
+- YouTuber
+- Entwickler
+
+Zusätzliche Metadaten:
+
+- Homepage
+- GitHub
+- YouTube
+- Instagram
+- Facebook
+- Berufsbezeichnung
+
+---
+
+## Source (Quelle)
+
+Repräsentiert externe Lernressourcen.
+
+Beispiele:
+
+- Udemy-Kurse
+- Bücher
+- YouTube-Kanäle
+- Dokumentationen
+- Blogartikel
+
+Relationen:
+
+- gehört zu einem Instructor
+
+Metadaten:
+
+- Source URL
+
+---
+
+## Project (Projekt)
+
+Repräsentiert praktische Umsetzungen.
+
+Beispiele:
+
+- Lernprojekte
+- Experimente
+- Kundenprojekte
+- Portfolio-Projekte
+
+Relationen:
+
+- kann mehrere Sources referenzieren
+- gehört indirekt zu einem Instructor über die verwendeten Sources
+
+Metadaten:
+
+- Projekt-Link
+- Folgeprojekt
+
+---
+
+## Post (Blogartikel)
+
+Normale WordPress-Beiträge.
+
+Relationen:
+
+- können auf Projects verweisen
+- können auf Sources verweisen
+- können auf Instructors verweisen
+
+Ziel:
+
+Dokumentation des Lernfortschritts und technischer Erkenntnisse.
+
+---
+
+# Taxonomien
+
+## Technology
+
+Beschreibt verwendete Technologien.
+
+Beispiele:
+
+- PHP
+- WordPress
+- React
+- Docker
+- Tailwind CSS
+
+Verwendet von:
+
+- Posts
+- Projects
+- Sources
+
+---
+
+## Project Type
+
+Beschreibt die Art eines Inhalts.
+
+Beispiele:
+
+- Lernprojekt
+- Udemy-Kurs
+- Portfolio-Projekt
+- Kundenprojekt
+- Proof of Concept
+
+Verwendet von:
+
+- Projects
+- Sources

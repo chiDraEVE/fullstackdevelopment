@@ -179,7 +179,6 @@ Das Theme definiert wiederverwendbare Gradient-Varianten:
 
 <div style="text-align: right;">
 
-[theme.json](#-überblick) |
 [nach oben](#fullstack-theme--dokumentation)
 
 </div>
@@ -422,7 +421,6 @@ Also grundsätzlich habe ich hier nichts selbst programmiert, sondern den FSE be
 
 <div style="text-align: right;">
 
-[theme.json](#-überblick) |
 [nach oben](#fullstack-theme--dokumentation)
 
 </div>
@@ -438,7 +436,6 @@ Die Datei `src/index.js` dient hauptsächlich als Einstiegspunkt für den Build-
 
 <div style="text-align: right;">
 
-[theme.json](#-überblick) |
 [nach oben](#fullstack-theme--dokumentation)
 
 </div>
@@ -459,7 +456,6 @@ Die Anpassung erfolgt nach dem Laden des DOM durch Entfernen des `loop`-Attribut
 
 <div style="text-align: right;">
 
-[theme.json](#-überblick) |
 [nach oben](#fullstack-theme--dokumentation)
 
 </div>
