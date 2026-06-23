@@ -4,7 +4,8 @@ docs/ \
 |-[architecture-notes.md](./docs/architecture-notes.md) \
 |-[fullstack-blocks.md](./docs/fullstack-blocks.md) \
 |-[my-first-gutenberg-app.md](./docs/my-first-gutenberg-app.md) \
-|-[fullstack-multisite-navigation.md](./docs/fullstack-multisite-navigation.md)
+|-[fullstack-multisite-navigation.md](./docs/fullstack-multisite-navigation.md) \
+|-[fullstack-theme.md](./docs/fullstack-theme.md)
 
 ## Datenmodell
 
@@ -19,7 +20,7 @@ docs/ \
 - ✅ ACF-Beziehungen eingerichtet
 - ⏳ Navigation-Plugin in Arbeit
 
-Ich habe übrigens noch eine ältere readme.md gefunden, die ich hier mal reinpacke. Sie ist nicht mehr ganz aktuell, aber gibt einen guten Überblick über die ursprünglichen Ziele und die Architektur des Projekts. Diese Datei habe ich umbenannt zu [docs/architecture-notes.md](./docs/architecture-notes.md), damit sie nicht mit der neuen readme verwechselt wird. Dafür habe ich auch den docs/-Folder erstellt, wo sämtliche Dokumentation landet bevor es die README.md sprengt.
+Ich habe übrigens noch eine ältere readme.md gefunden, die ich hier mal herein packe. Sie ist nicht mehr ganz aktuell, aber gibt einen guten Überblick über die ursprünglichen Ziele und die Architektur des Projekts. Diese Datei habe ich umbenannt zu [docs/architecture-notes.md](./docs/architecture-notes.md), damit sie nicht mit der neuen readme verwechselt wird. Dafür habe ich auch den docs/-Folder erstellt, wo sämtliche Dokumentation landet bevor es die README.md sprengt.
 
 # Fullstack Development – WordPress Multisite Theme & Plugin
 
@@ -35,7 +36,7 @@ Ziel des Projekts ist eine **moderne, wartbare und DSGVO-konforme WordPress-Inst
 - Custom **Block Theme (Full Site Editing)**
 - Zentrale Konfiguration über `theme.json`
 - **Lokal gehostete Schriften** (keine Google Fonts)
-- Eigene **Developer-Tools** zur Umgebungs- & Branch-Erkennung
+- Eigene **Developer-Tools** zur Environment- & Branch-Erkennung
 - Fokus auf **saubere Trennung** von:
     - Inhalt
     - Design
@@ -49,7 +50,7 @@ Ziel des Projekts ist eine **moderne, wartbare und DSGVO-konforme WordPress-Inst
 
 - Block Theme mit `theme.json` als **Single Source of Truth**
 - Minimalistische `functions.php`
-- Keine Abhängigkeit von Page Buildern
+- Keine Abhängigkeit von Page-Builder
 - Vorbereitung für:
     - eigene Gutenberg-Blöcke
     - optionale Frameworks (z. B. Tailwind / Bootstrap)
@@ -105,7 +106,7 @@ Beispiele:
 
 ## 🧪 Plugin – Environment & Git Branch Indicator
 
-Eigenes Developer-Plugin zur **visuellen Kennzeichnung der Umgebung** direkt in der WordPress Admin-Bar. (diesen Absatz könnte man auch löschen, da die Dokumnetation unter [architecture-notes.md](./docs/architecture-notes.md) zu finden ist, aber die README.md ist noch überschaubar, also lasse ich das mal drin)
+Eigenes Developer-Plugin zur **visuellen Kennzeichnung der Umgebung** direkt in der WordPress Admin-Bar. (diesen Absatz könnte man auch löschen, da die Dokumentation unter [architecture-notes.md](./docs/architecture-notes.md) zu finden ist, aber die README.md ist noch überschaubar, also lasse ich das mal drin)
 
 ### Funktionen
 

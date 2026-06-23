@@ -73,7 +73,6 @@ wp-scripts start
 
 <div style="text-align: right;">
 
-[theme.json](#-überblick) |
 [nach oben](#fullstack-theme--dokumentation)
 
 </div>
@@ -104,7 +103,6 @@ SASS/CSS wird dagegen für konkrete Implementierungen und Komponenten verwendet:
 
 <div style="text-align: right;">
 
-[theme.json](#-überblick) |
 [nach oben](#fullstack-theme--dokumentation)
 
 </div>

@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
+	"$schema": "https://schemas.wp.org/wp/7.0/theme.json",
 	"version": 3,
 	"settings": {
 		"color": {
@@ -82,7 +82,7 @@
 					"slug": "grey-dark"
 				},
 				{
-					"color": "#E8EBED",
+					"color": "#e8EBED",
 					"name": "light ~ Anti-flash white",
 					"slug": "light"
 				},
@@ -102,6 +102,10 @@
 					"slug": "dark-grey"
 				}
 			]
+		},
+		"layout": {
+			"contentSize": "80rem",
+			"wideSize": "100rem"
 		},
 		"spacing": {
 			"blockGap": true,
@@ -247,17 +251,43 @@
 					"name": "handwritten",
 					"slug": "handwritten"
 				}
+			],
+			"fontSizes": [
+				{
+					"name": "Small",
+					"size": "1rem",
+					"slug": "small"
+				},
+				{
+					"name": "Normal",
+					"size": "1.25rem",
+					"slug": "normal"
+				},
+				{
+					"name": "Large",
+					"size": "1.75rem",
+					"slug": "large"
+				},
+				{
+					"name": "Larger",
+					"size": "2.25rem",
+					"slug": "larger"
+				},
+				{
+					"name": "Extra Large",
+					"size": "3rem",
+					"slug": "x-large"
+				},
+				{
+					"name": "Gigantic",
+					"size": "3.75rem",
+					"slug": "gigantic"
+				}
 			]
 		}
 	},
 	"styles": {
 		"blocks": {
-			"core/site-title": {
-				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--handwritten)",
-					"fontWeight": "700"
-				}
-			},
 			"core/code": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--code)",
@@ -277,6 +307,12 @@
 				},
 				"typography": {
 					"fontSize": "1rem"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--handwritten)",
+					"fontWeight": "700"
 				}
 			},
 			"core/verse": {
@@ -320,9 +356,23 @@
 				}
 			}
 		},
+		"spacing": {
+			"blockGap": "2rem",
+			"padding": {
+				"bottom": "0rem",
+				"left": "0",
+				"right": "0",
+				"top": "0rem"
+			}
+		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--body)",
-			"fontSize": "1rem"
+			"fontSize": "1.25rem",
+			"fontStyle": "normal",
+			"fontWeight": "400",
+			"lineHeight": "1.5",
+			"textDecoration": "none",
+			"textTransform": "none"
 		}
 	},
 	"templateParts": [
