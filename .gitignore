@@ -34,6 +34,7 @@ themes/*
 #!themes/fictional-clean-blocks
 #!themes/udemy
 !themes/fullstack-theme
+!themes/slider-theme
 !themes/index.php
 
 !mu-plugins
