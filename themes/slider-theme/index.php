@@ -1,13 +1,28 @@
 <?php
 
-wp_head();
+get_header();
 
-while ( have_posts() ) {
-    the_post();
-    the_title( '<h1 class="entry-title">', '</h1>' );
-    the_content();
-    echo '<div class="slider-container">';
-    echo '</div>';
-}
+?>
+<div class="slider-track">
 
-wp_footer();
+<?php while ( have_posts() ) : the_post(); ?>
+
+    <article class="slide">
+        <div class="slider-container">
+        <?php
+            the_title( '<h2 class="entry-title">', '</h2>' );
+            the_excerpt();
+
+            the_post_thumbnail('large');
+        ?>
+        </div>
+
+    </article>
+
+<?php endwhile; ?>
+
+</div>
+
+<?php
+get_footer();
+?>
