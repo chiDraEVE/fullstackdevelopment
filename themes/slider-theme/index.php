@@ -9,12 +9,15 @@ get_header();
 
     <article class="slide">
         <div class="slider-container">
-        <?php
-            the_title( '<h2 class="entry-title">', '</h2>' );
-            the_excerpt();
-
-            the_post_thumbnail('large');
-        ?>
+            <div class="slider-content">
+                <?php
+                    the_title( '<h2 class="entry-title">', '</h2>' );
+                    the_excerpt();
+                ?>
+            </div>
+            <div class="slider-image">
+                <?php the_post_thumbnail('large'); ?>
+            </div>
         </div>
 
     </article>

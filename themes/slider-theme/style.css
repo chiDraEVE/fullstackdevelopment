@@ -9,3 +9,39 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: fullstack-theme
 */
+
+.slider-track {
+    display: flex;
+    flex-direction: row;
+
+    min-height: 60vh;
+}
+
+.slider-container {
+    display: grid;
+
+}
+
+.slider-container > *{
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-content {
+    z-index: 2;
+    width: 10vw;
+
+    padding: 2vw;
+    margin: auto;
+
+    opacity: 0.6;
+    background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray);
+}
+
+.slider-content > *{
+    opacity: 1;
+}
